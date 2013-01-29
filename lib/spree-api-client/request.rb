@@ -20,6 +20,7 @@ module Spree
             when :delete, :head
               request.url(path, options)
             when :patch, :post, :put
+              puts "post"
               request.path = path
               request.body = options.to_json unless options.empty?
             end
