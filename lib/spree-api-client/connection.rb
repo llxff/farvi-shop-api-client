@@ -16,9 +16,6 @@ module Spree
             builder.request :json
 
             builder.use FaradayMiddleware::FollowRedirects
-            builder.use FaradayMiddleware::Mashify
-
-            builder.use FaradayMiddleware::ParseJson, :content_type => /\bjson$/
 
             builder.adapter  Faraday.default_adapter
           end
