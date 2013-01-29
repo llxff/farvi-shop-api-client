@@ -17,6 +17,8 @@ module Spree
 
             builder.use FaradayMiddleware::FollowRedirects
 
+            builder.use FaradayMiddleware::ParseJson, :content_type => /\bjson$/
+
             builder.adapter  Faraday.default_adapter
           end
           connection
