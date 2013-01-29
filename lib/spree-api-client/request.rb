@@ -21,7 +21,7 @@ module Spree
               request.url(path, options)
             when :patch, :post, :put
               request.path = path
-              request.body = MultiJson.dump(options) unless options.empty?
+              request.body = options.to_json unless options.empty?
             end
           end
 
