@@ -8,21 +8,16 @@ module Spree
           response = connection.send(method) do |request|
 
             request.headers['Accept'] =  options.delete(:accept) || 'application/json'
-
-            if token
-              request.headers['X-Spree-Token'] = token
-            end
+            request.headers['X-Spree-Token'] = token if token
 
             case method
-            when :get
-              options.merge!(:per_page => per_page) if per_page
-              request.url(path, options)
-            when :delete, :head
-              request.url(path, options)
-            when :patch, :post, :put
-              puts "post"
-              request.path = path
-              request.body = options.to_json unless options.empty?
+              when :get
+                options.merge!(:per_page => per_page) if per_page
+                request.url(path, options)
+              when :delete, :head
+                request.url(path, options)
+              when :patch, :post, :put
+                request.url(path, options)
             end
           end
 
