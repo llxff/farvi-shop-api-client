@@ -14,6 +14,7 @@ module Spree
 
           connection = Faraday.new(options) do |builder|
             builder.request :json
+            faraday.response :logger
 
             builder.use FaradayMiddleware::FollowRedirects
 
