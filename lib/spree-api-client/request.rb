@@ -24,7 +24,7 @@ module Spree
               request.body = MultiJson.dump(options) unless options.empty?
             end
           end
-
+          puts response.inspect
           response
         end
       
