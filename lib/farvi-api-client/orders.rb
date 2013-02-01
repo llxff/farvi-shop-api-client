@@ -1,4 +1,4 @@
-module Spree
+module Farvi
   module API
     class Client
       module Orders

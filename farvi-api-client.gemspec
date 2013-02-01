@@ -1,16 +1,16 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'spree-api-client/version'
+require 'farvi-api-client/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "spree-api-client"
-  gem.version       = Spree::API::Client::VERSION
-  gem.authors       = ["Andrew Nesbitt"]
-  gem.email         = ["andrewnez@gmail.com"]
-  gem.description   = %q{A rubygem for interacting with the Spree API}
-  gem.summary       = %q{A rubygem for interacting with the Spree API}
-  gem.homepage      = "https://github.com/andrew/spree-api-client"
+  gem.name          = "farvi-api-client"
+  gem.version       = Farvi::API::Client::VERSION
+  gem.authors       = ["Andrew Nesbitt", "llxff"]
+  gem.email         = ["andrewnez@gmail.com", "ll.wg.bin@gmail.com"]
+  gem.description   = %q{A rubygem for interacting with the Farvi API}
+  gem.summary       = %q{A rubygem for interacting with the Farvi API}
+  gem.homepage      = "https://github.com/llxff/farvi-api-client"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

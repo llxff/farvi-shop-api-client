@@ -1,4 +1,4 @@
-module Spree
+module Farvi
   module API
     class Client
       module Request
@@ -8,7 +8,7 @@ module Spree
           response = connection.send(method) do |request|
 
             request.headers['Accept'] =  options.delete(:accept) || 'application/json'
-            request.headers['X-Spree-Token'] = token if token
+            request.headers['X-Farvi-Token'] = token if token
 
             case method
               when :get
