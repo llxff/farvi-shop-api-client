@@ -38,6 +38,7 @@ module Farvi
       include Farvi::API::Client::Taxons
       include Farvi::API::Client::Payments
       include Farvi::API::Client::Shipments
+      include Farvi::API::Client::PaymentTypes
 
       attr_accessor :api_endpoint, :api_token, :per_page
       def initialize(api_endpoint, api_token, options={})
