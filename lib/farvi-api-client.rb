@@ -17,6 +17,7 @@ require 'farvi-api-client/return_authorizations'
 require 'farvi-api-client/taxons'
 require 'farvi-api-client/payments'
 require 'farvi-api-client/shipments'
+require 'farvi-api-client/payment_types'
 
 module Farvi
   module API
