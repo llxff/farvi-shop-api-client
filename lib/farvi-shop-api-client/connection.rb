@@ -1,4 +1,4 @@
-module Farvi
+module FarviShop
   module API
     class Client
       module Connection

@@ -1,3 +1,3 @@
-# Farvi Api Client
+# Farvi Shop Api Client
 
 Based on SpreeApiClient

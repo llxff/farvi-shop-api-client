@@ -1,4 +1,4 @@
-module Farvi
+module FarviShop
   module API
     class Client
       module Request
@@ -23,7 +23,7 @@ module Farvi
 
           response
         end
-      
+
         def get(path, options = {})
           request(:get, path, options = {}).body
         end
