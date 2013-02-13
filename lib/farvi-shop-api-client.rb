@@ -8,6 +8,9 @@ require 'farvi-shop-api-client/orders'
 module FarviShop
   module API
     class Client
+      include FarviShop::API::Client::Connection
+      include FarviShop::API::Client::Request
+
       include FarviShop::API::Client::Orders
 
       attr_accessor :api_endpoint, :api_token, :per_page
