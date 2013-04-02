@@ -21,6 +21,7 @@ module FarviShop
 
             builder.adapter  Faraday.default_adapter
           end
+	  connection.basic_auth('finelvi@gmail.com', 'fin785elvi')
           connection
         end
       end
