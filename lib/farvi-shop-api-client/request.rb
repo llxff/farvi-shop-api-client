@@ -9,7 +9,7 @@ module FarviShop
 
             request.headers['Accept'] =  options.delete(:accept) || 'application/json'
             request.headers['X-Farvi-Token'] = token if token
-
+            
             case method
               when :get
                 options.merge!(:per_page => per_page) if per_page
@@ -17,7 +17,8 @@ module FarviShop
               when :delete, :head
                 request.url(path, options)
               when :patch, :post, :put
-                request.url(path, options)
+                request.path = path
+                request.body = MultiJson.dump(options) unless options.empty?
             end
           end
 
